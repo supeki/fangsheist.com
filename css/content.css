@@ -1,21 +1,3 @@
-/* Apply basic reset and ensure the body fills the viewport */
-body {
-	margin: 0;
-	padding: 0;
-	height: 100vh;
-	/* Make body fill the entire viewport height */
-	overflow: hidden;
-	/* Hide scrollbars if content overflows during animation */
-	font-family: 'Inter', sans-serif;
-	/* Using Inter font as per instructions */
-	justify-content: center;
-	align-items: center;
-	color: white;
-	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-	font-size: 2rem;
-	text-align: center;
-}
-
 img { 
 	image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
 	image-rendering: -moz-crisp-edges;          /* Firefox                        */
@@ -24,14 +6,4 @@ img {
 	image-rendering: pixelated;                 /* Universal support since 2021   */
 	image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
 	-ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
-}
-
-/* Styles for the content overlay */
-.content {
-	text-align: "center";
-	position: relative;
-	background-size: contain;
-	padding: 10px;
-	margin: .5em;
-	font: 60px arial;
 }
