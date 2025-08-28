@@ -1,29 +1,22 @@
-:root {
-	--padding: 8px;
-	--height: 74px;
-}
-
 nav {
-    background-color: #550066;
+    background-color: purple;
     display: flex;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    max-height: var(--height);
+    max-height: 60px;
 }
 body {
-    margin-top: calc(var(--height) + var(--padding));
+    margin-top: 80px;
 }
 nav ul {
+    padding-left: 0;
     list-style: none;
-    font-style: italic;
-    text-shadow: 1px 1px 5px black;
 }
 nav li {
     display: inline-block;
-    margin: var(--padding);
-    margin-top: 0px;
+    margin: 2px;
 }
 nav a {
     padding: 4px;
@@ -31,6 +24,6 @@ nav a {
 }
 nav img {
     margin-right: auto;
-    height: calc(var(--height) - var(--padding) * 2);
-    padding: var(--padding);
+    height: 50px;
+    padding: 5px;
 }
