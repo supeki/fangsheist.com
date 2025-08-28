@@ -1,4 +1,11 @@
 /* The container for our moving background image */
+:root {
+	--background: url('/assets/img/background.png');
+	--background-width: 291px;
+	--background-height: 216px;
+	--speed: 10s;
+}
+
 .diagonal-background {
 	position: absolute;
 	/* Position absolutely to cover the body */
@@ -11,20 +18,27 @@
 
 	/* --- IMPORTANT CHANGES FOR IMAGE BACKGROUND --- */
 	/* Specify your image URL here. Replace with your actual image path or URL. */
-	background-image: url('/assets/img/background.png');
+	background-image: var(--background);
 	/* Fallback in case the image fails to load. */
 	background-color: #a724e7;
 	/* Dark blue background */
 	background-repeat: repeat;
 	/* Ensure the image doesn't tile by default */
 
-	image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
-	image-rendering: -moz-crisp-edges;          /* Firefox                        */
-	image-rendering: -o-crisp-edges;            /* Opera                          */
-	image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
-	image-rendering: pixelated;                 /* Universal support since 2021   */
-	image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
-	-ms-interpolation-mode: nearest-neighbor;   /* IE8+    
+	image-rendering: optimizeSpeed;
+	/* STOP SMOOTHING, GIVE ME SPEED  */
+	image-rendering: -moz-crisp-edges;
+	/* Firefox                        */
+	image-rendering: -o-crisp-edges;
+	/* Opera                          */
+	image-rendering: -webkit-optimize-contrast;
+	/* Chrome (and eventually Safari) */
+	image-rendering: pixelated;
+	/* Universal support since 2021   */
+	image-rendering: optimize-contrast;
+	/* CSS3 Proposed                  */
+	-ms-interpolation-mode: nearest-neighbor;
+	/* IE8+
 
 	/* Make the background image larger than the container so it can move without showing edges.
        Adjust these percentages based on how much of the image you want to see at once
@@ -33,7 +47,7 @@
 	/* Important: Make it larger to allow for movement */
 
 	/* Apply the animation */
-	animation: diagonalMovement 10s linear infinite;
+	animation: diagonalMovement var(--speed) linear infinite;
 	/* Customize duration, timing function, and iteration */
 }
 
@@ -43,6 +57,6 @@
 		background-position: calc(0) calc(0);
 	}
 	100% {
-		background-position: calc(291px) calc(216px);
+		background-position: calc(1 * var(--background-width)) calc(1 * var(--background-height));
 	}
 }
