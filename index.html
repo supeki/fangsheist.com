@@ -1,130 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<title>Fang's Heist - Home</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Diagonal Moving Image Background</title>
-	<style>
-		/* Apply basic reset and ensure the body fills the viewport */
-		body {
-			margin: 0;
-			padding: 0;
-			height: 100vh;
-			/* Make body fill the entire viewport height */
-			overflow: hidden;
-			/* Hide scrollbars if content overflows during animation */
-			font-family: 'Inter', sans-serif;
-			/* Using Inter font as per instructions */
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			color: white;
-			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-			font-size: 2rem;
-			text-align: center;
-		}
-
-		img { 
-			image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
-			image-rendering: -moz-crisp-edges;          /* Firefox                        */
-			image-rendering: -o-crisp-edges;            /* Opera                          */
-			image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
-			image-rendering: pixelated;                 /* Universal support since 2021   */
-			image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
-			-ms-interpolation-mode: nearest-neighbor;   /* IE8+                           */
-		}
-
-		/* The container for our moving background image */
-		.diagonal-background {
-			position: absolute;
-			/* Position absolutely to cover the body */
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-
-			/* --- IMPORTANT CHANGES FOR IMAGE BACKGROUND --- */
-			/* Specify your image URL here. Replace with your actual image path or URL. */
-			background-image: url('HEISTBACK.png');
-			/* Fallback in case the image fails to load. */
-			background-color: #a724e7;
-			/* Dark blue background */
-			background-repeat: repeat;
-			/* Ensure the image doesn't tile by default */
-
-			/* Make the background image larger than the container so it can move without showing edges.
-               Adjust these percentages based on how much of the image you want to see at once
-               and how far you want it to move. 200% 200% will make it twice as large. */
-			background-size: auto;
-			/* Important: Make it larger to allow for movement */
-
-			/* Apply the animation */
-			animation: diagonalMovement 10s linear infinite;
-			/* Customize duration, timing function, and iteration */
-		}
-
-		.image-container {
-			display: flex;
-			justify-content: center; /* Centers horizontally */
-			align-items: center; /* Centers vertically */
-			height: 100vh; /* Optional: Use this if you want to center vertically in the viewport */
-		}
-
-		/* Define the keyframes for the diagonal movement animation */
-		@keyframes diagonalMovement {
-			0% {
-				background-position: calc(0) calc(0);
-			}
-			100% {
-				background-position: calc(291px) calc(216px);
-			}
-		}
-
-		/* Styles for the content overlay */
-		.content {
-			text-align: "center";
-			position: relative;
-			background-size: contain;
-			/* Ensure content stays on top of the moving background */
-			z-index: 1;
-			/* Place content above the background */
-			padding: 10px;
-			margin: .5em;
-			font: 60px arial;
-			
-			/* trick */
-			-webkit-text-stroke: 1px black;
-			color: white;
-		}
-	</style>
+	<link rel="stylesheet" href="css/background.css">
+	<link rel="stylesheet" href="css/content.css">
+	<link rel="stylesheet" href="css/navbar.css">
 	<!--<script src="js/indexscript.js"></script></script> -->
 </head>
 <body>
-	<!-- The div that holds the diagonally moving background image -->
 	<div class="diagonal-background"></div>
-	<div style="font-size: 18px" class="content">
-		<img src="FH_LOGO.png">
-		<p>
-			Coming SUPER soon. Like, super DUPER soon.
-		</p>
-	</div>
-
-	<!-- Your content goes here, layered on top of the moving background -->
-<!--	<div class="content">
-		<h1>Hello there!</h1>
-		<p>
-			This is a background image moving diagonally.
-		</p>
-		<p>
-			Pretty cool, right? ✨
-		</p>
-	</div>-->
+	<nav class="navbar">
+		<div class="logo">
+			<img src="/assets/img/logo.png">
+		</div>
+		<button class="nav-toggle">
+			<span class="hamburger"></span>
+		</button>
+		<ul class="nav-links">
+			<li><a href="#">CHARACTERS</a></li>
+			<li><a href="#">MODDING</a></li>
+			<li><a href="#">RECORDS</a></li>
+			<li><a href="#">LINKS</a></li>
+		</ul>
+	</nav>
+	<!--	<div style="font-size: 12px; display: block" class="content">
+			<img src="/assets/img/logo.png">
+			<p>
+				Coming SUPER soon. Like, super DUPER soon.
+			</p>
+		    <div id="audio">
+		      <audio autoplay controls>
+		        <source src="/assets/music/BlessYouBoy.ogg" type="audio/ogg">
+		        Your browser does not support the audio element.
+		      </audio>
+		    </div>
+		</div>-->
 </body>
 </html>
-
-    <!--<div id="audio">
-      <audio autoplay controls>
-        <source src="O__TITLE.ogg" type="audio/ogg">
-        Your browser does not support the audio element.
-      </audio>
-    </div>-->

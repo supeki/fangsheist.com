@@ -1,0 +1,48 @@
+/* The container for our moving background image */
+.diagonal-background {
+	position: absolute;
+	/* Position absolutely to cover the body */
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	z-index: -1;
+
+	/* --- IMPORTANT CHANGES FOR IMAGE BACKGROUND --- */
+	/* Specify your image URL here. Replace with your actual image path or URL. */
+	background-image: url('/assets/img/background.png');
+	/* Fallback in case the image fails to load. */
+	background-color: #a724e7;
+	/* Dark blue background */
+	background-repeat: repeat;
+	/* Ensure the image doesn't tile by default */
+
+	image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
+	image-rendering: -moz-crisp-edges;          /* Firefox                        */
+	image-rendering: -o-crisp-edges;            /* Opera                          */
+	image-rendering: -webkit-optimize-contrast; /* Chrome (and eventually Safari) */
+	image-rendering: pixelated;                 /* Universal support since 2021   */
+	image-rendering: optimize-contrast;         /* CSS3 Proposed                  */
+	-ms-interpolation-mode: nearest-neighbor;   /* IE8+    
+
+	/* Make the background image larger than the container so it can move without showing edges.
+       Adjust these percentages based on how much of the image you want to see at once
+       and how far you want it to move. 200% 200% will make it twice as large. */
+	background-size: auto;
+	/* Important: Make it larger to allow for movement */
+
+	/* Apply the animation */
+	animation: diagonalMovement 10s linear infinite;
+	/* Customize duration, timing function, and iteration */
+}
+
+/* Define the keyframes for the diagonal movement animation */
+@keyframes diagonalMovement {
+	0% {
+		background-position: calc(0) calc(0);
+	}
+	100% {
+		background-position: calc(291px) calc(216px);
+	}
+}

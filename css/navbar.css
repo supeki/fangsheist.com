@@ -1,0 +1,44 @@
+.navbar {
+	background-color: #3f1961;
+	/* The deep purple background color */
+	display: flex;
+	/* Makes the logo and links align horizontally */
+	justify-content: space-between;
+	/* Pushes the logo to the left and links to the right */
+	align-items: center;
+	/* Vertically centers the items */
+	padding: 2px 2px;
+	/* Adds some space inside the bar */
+	height: 100px;
+	width: 100%;
+	position: fixed;
+}
+
+.nav-links {
+	width: 50%;
+	list-style: none;
+	/* Removes the bullet points */
+	display: flex;
+	gap: 1rem;
+	/* Adds space between the links */
+	margin: 0;
+	padding: 0;
+}
+
+.nav-toggle {
+	display: none;
+}
+
+.logo a, .nav-links a {
+	text-decoration: none;
+	/* Removes the underline from links */
+	color: #00ff00;
+	/* The bright green text color */
+	font-size: 1rem;
+	padding: 0px 1px;
+	text-shadow: 2px 2px #000;
+	/* The black "8-bit" text shadow */
+}
+
+@media (max-width: 768px) {
+}
