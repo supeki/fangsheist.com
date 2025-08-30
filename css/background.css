@@ -7,7 +7,7 @@
 }
 
 .diagonal-background {
-	position: absolute;
+	position: fixed;
 	/* Position absolutely to cover the body */
 	top: 0;
 	left: 0;

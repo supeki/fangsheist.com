@@ -7,9 +7,6 @@ nav {
     width: 100%;
     max-height: 60px;
 }
-body {
-    margin-top: 80px;
-}
 nav ul {
     padding-left: 0;
     list-style: none;
