@@ -1,3 +1,8 @@
+@font-face {
+	font-family: "Sonic2";
+	src: url("/assets/fonts/sonic-2-system-lowercase.otf")
+}
+
 img { 
 	image-rendering: optimizeSpeed;             /* STOP SMOOTHING, GIVE ME SPEED  */
 	image-rendering: -moz-crisp-edges;          /* Firefox                        */
@@ -9,7 +14,16 @@ img {
 }
 
 body {
+	font-family: Sonic2;
 	color: white;
 	background-color: white;
-	text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+	text-shadow: -1px -1px 0 black,
+		-1px 1px 0 black,
+		1px -1px 0 black,
+		1px 1px 0 black;
+}
+
+a:link {
+	color: #4bef4a;
+	font-style: italic;
 }
