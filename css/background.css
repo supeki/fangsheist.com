@@ -10,7 +10,7 @@
 
 	/* --- IMPORTANT CHANGES FOR IMAGE BACKGROUND --- */
 	/* Specify your image URL here. Replace with your actual image path or URL. */
-	background-image: var(--background);
+	background-image: url('/assets/img/background.png');
 	/* Fallback in case the image fails to load. */
 	background-color: #a724e7;
 	/* Dark blue background */
